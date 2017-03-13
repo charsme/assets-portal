@@ -8,7 +8,7 @@ class Css
 {
     protected $container;
     protected $config;
-    protected $cache;
+    protected $minify;
 
     // constructor receives container instance
     public function __construct(Container $container, $minify, $config = [])

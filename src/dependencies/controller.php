@@ -1,10 +1,15 @@
 <?php
 
-use Labs\Controller as C;
 use MatthiasMullie\Minify;
 
-$container[C\Css::class] = function ($c) {
+$container[\Labs\Controller\Css::class] = function ($c) {
     $config = $c->get('settings');
     
-    return new C\Css($c, new Minify\CSS() ,$config);
+    return new \Labs\Controller\Css($c, new Minify\CSS() ,$config);
+};
+
+$container[\Labs\Controller\js::class] = function ($c) {
+    $config = $c->get('settings');
+    
+    return new \Labs\Controller\Js($c, new Minify\JS() ,$config);
 };
