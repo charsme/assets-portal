@@ -5,17 +5,17 @@ require __DIR__ . '/../vendor/autoload.php';
 session_start();
 
 // Instantiate the app
-$settings = require  'settings.php';
+$settings = require  'settings/main.php';
 $app = new \Slim\App($settings);
 
 // Set up dependencies
-require 'dependencies.php';
+require 'dependencies/main.php';
 
 // Register middleware
-require 'middleware.php';
+require 'middleware/main.php';
 
 // Register routes
-require 'routes.php';
+require 'routes/main.php';
 
 // Run app
 $app->run();

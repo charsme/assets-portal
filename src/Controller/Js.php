@@ -1,10 +1,10 @@
 <?php
 
-namespace Raraz\Controller;
+namespace Labs\Controller;
 
 use \Slim\Container;
 
-class Api
+class Js
 {
     protected $container;
 
@@ -16,7 +16,6 @@ class Api
     
     public function __invoke($request, $response, $args)
     {
-        $this->container->get('log')->info('Api Route');
-        return $this->container->get('view')->render($response, 'base.twig', ['title' => 'Api']);
+        return $this->container->get('view')->render($response, 'base.twig', ['title' => 'Asset']);
     }
 }
